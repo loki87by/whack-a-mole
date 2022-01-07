@@ -11,4 +11,4 @@
 * Flex-контейнеры 
 * и прочее 
 
-[Деплой тут](https://loki87by.github.io/JS-Clock/)
+[Деплой тут](https://loki87by.github.io/whack-a-mole/)
