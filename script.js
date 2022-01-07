@@ -79,9 +79,9 @@ function setDrubbing(arg) {
       if (index !== 0) {
         drubbingString += ` `;
       }
-      drubbingString += ` url('${window.location.origin}/assets/${i}.png'),`;
+      drubbingString += ` url('${window.location.href}/assets/${i}.png'),`;
     });
-    drubbingString += ` url('${window.location.origin}/assets/mole.png')`;
+    drubbingString += ` url('${window.location.href}/assets/mole.png')`;
     const moles = document.querySelectorAll(".mole");
     moles.forEach((i) => {
       i.style = `background-image: ${drubbingString};height: ${holeContainerHeight}px;`;
@@ -350,10 +350,10 @@ checkHiscore();
 setMolesHeight();
 
 function weapon(e) {
-  if (WEAPON.src === `${window.location.origin}/assets/hammer.png`) {
+  if (WEAPON.src === `${window.location.href}/assets/hammer.png`) {
     WEAPON.style.left = `${Math.floor(e.pageX - WEAPON.width * 0.55)}px`;
     WEAPON.style.top = `${Math.floor(e.pageY - WEAPON.height * 0.9)}px`;
-  } else if (WEAPON.src === `${window.location.origin}/assets/pan.png`) {
+  } else if (WEAPON.src === `${window.location.href}/assets/pan.png`) {
     WEAPON.style.left = `${Math.floor(e.pageX - WEAPON.width * 1.1)}px`;
     WEAPON.style.top = `${Math.floor(e.pageY - WEAPON.height / 1.2)}px`;
   } else {
