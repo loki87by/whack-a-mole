@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- <link rel="icon" href="./assets/svg/favicon.svg"> -->
+    <meta name="author" content="Alexey Akulich" />
+    <title>Whack-a-mole</title>
+  </head>
+  <body>
+    <section class="preload">
+      <div class="preload__text-container">
+        <p class="preload__text" style="bottom: -150%">
+          В середине 80х годов ХХ века, на военной базе под Припятью, советские
+          разведслужбы разрабатывали биологическое оружие. <br />Суть этого
+          оружия заключалась в том чтобы уничтожить посевы потенциального врага,
+          тем самим оставив его без пропитания. <br />В виду событий 26 апреля
+          1986 все сотрудники были эвакуированы, а военная база опечатана.
+          <br />В начале 20х годов XXI века на базу через систему канализации
+          смогла проникнуть компания диггеров. <br />По случайности одна колба с
+          недоработанным биологическим оружием была разбита. <br />Теперь
+          популяция кротов растет с каждым днем. <br />И твой когда-то богатый
+          урожай под домом теперь полностью уничтожен <br />Настало время
+          разобраться с вредителями!
+        </p>
+      </div>
+      <div class="preload__slider">
+        <img class="preload__slide" src="./assets/slide1.jpg" alt="slide" />
+        <img class="preload__slide" src="./assets/slide2.jpg" alt="slide" />
+        <img class="preload__slide" src="./assets/slide3.jpg" alt="slide" />
+        <img class="preload__slide" src="./assets/slide4.jpg" alt="slide" />
+        <img class="preload__slide" src="./assets/slide5.jpg" alt="slide" />
+        <img class="preload__slide" src="./assets/slide6.jpg" alt="slide" />
+        <img class="preload__slide" src="./assets/slide7.jpg" alt="slide" />
+        <div class="preload__slide">
+          <p class="preload__slide-text">Вооружись</p>
+        </div>
+        <div class="preload__slide">
+          <p class="preload__slide-text">Приготовься</p>
+        </div>
+        <div class="preload__slide">
+          <p class="preload__slide-text">К бою!</p>
+        </div>
+      </div>
+    </section>
+    <header class="hidden">
+      <h1>Whack-a-mole</h1>
+    </header>
+    <main class="hidden">
+      <section class="menu">
+        <h3 class="menu__item">Hi-score:</h3>
+        <h3 class="menu__item">Score:</h3>
+        <h3 class="menu__item">Damage:</h3>
+      </section>
+      <section class="game">
+        <img
+          class="weapon weapon_kicked"
+          src="./assets/rolling-pin.png"
+          alt="weapon"
+        />
+        <div class="game__item">
+          <img class="hole" src="./assets/hole.png" alt="hole" />
+          <div class="mole"></div>
+        </div>
+        <div class="game__item">
+          <img class="hole" src="./assets/hole.png" alt="hole" />
+          <div class="mole"></div>
+        </div>
+        <div class="game__item">
+          <img class="hole" src="./assets/hole.png" alt="hole" />
+          <div class="mole"></div>
+        </div>
+        <div class="game__item">
+          <img class="hole" src="./assets/hole.png" alt="hole" />
+          <div class="mole"></div>
+        </div>
+        <div class="game__item">
+          <img class="hole" src="./assets/hole.png" alt="hole" />
+          <div class="mole"></div>
+        </div>
+        <div class="game__item">
+          <img class="hole" src="./assets/hole.png" alt="hole" />
+          <div class="mole"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="hidden">
+      <h3 class="footer__item">Level:</h3>
+      <h3 class="footer__item">Countdown:</h3>
+      <h3 class="footer__item">Kicks:</h3>
+      <h3 class="footer__item">Targets:</h3>
+    </footer>
+    <section class="popup">
+      <div class="popup__container">
+        <h3 class="popup__title"></h3>
+        <button class="popup__button" id="restart" type="button"></button>
+        <button class="popup__button" id="next" type="button"></button>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:cc="http://web.resource.org/cc/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    xmlns:ns1="http://sozi.baierouge.fr"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    id="Biohazard"
+    xml:space="preserve"
+    version="1.0"
+    viewBox="0 0 351.665 330.719"
+  >
+<g
+      id="g5"
+    >
+	<path
+        id="path7"
+        d="m170.87 149.95v15.31c-14.14 2.94-20.87 15.62-16.81 29.69l-13 7.62c-55.686-75.08-163.85-14.41-132.02 71.42-29.667-68.67 18.5-132.67 74.583-139.42-21.916-58.582 13.417-126.42 81.067-133.68-87.316 15.598-86.483 138.43 6.18 149.06z"
+    />
+	<path
+        id="path9"
+        d="m145.05 210.44l13.26-7.66c9.62 10.79 23.97 10.27 34.12-0.28l13.1 7.45c-37.18 85.77 69.45 149.11 127.86 78.62-44.63 60.03-124.14 50.31-158.03 5.12-39.77 48.27-116.19 51.59-156.3-3.36 57.163 67.81 163.12 5.68 125.99-79.89z"
+    />
+	<path
+        id="path11"
+        d="m210.76 202.17l-13.26-7.65c4.53-13.72-3.1-25.89-17.3-29.41l-0.11-15.07c92.87-10.68 94.41-134.69 4.16-150.04 74.3 8.642 105.65 82.355 83.45 134.3 61.69 10.31 102.77 74.83 75.24 137.05 30.15-83.42-76.64-144.11-132.18-69.18z"
+    />
+	<path
+        id="path13"
+        d="m120.25 112.88l16.75 16.94c22.94-17.5 57.69-13.75 77.19-0.44l15.87-16.5c-30.44-24.724-76.77-24.724-109.81 0z"
+    />
+	<path
+        id="path15"
+        d="m268.16 177.75l-23.04 6.04c3.68 28.61-16.94 56.83-38.22 67.07l6.36 21.99c36.63-13.99 59.8-54.12 54.9-95.1z"
+    />
+	<path
+        id="path17"
+        d="m138.18 272.6l6.29-22.97c-26.62-11.12-40.75-43.09-38.97-66.63l-22.227-5.5c-6.196 38.73 16.967 78.85 54.907 95.1z"
+    />
+</g
+  >
+<metadata
+    ><rdf:RDF
+      ><cc:Work
+        ><dc:format
+          >image/svg+xml</dc:format
+        ><dc:type
+            rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+        /><cc:license
+            rdf:resource="http://creativecommons.org/licenses/publicdomain/"
+        /><dc:publisher
+          ><cc:Agent
+              rdf:about="http://openclipart.org/"
+            ><dc:title
+              >Openclipart</dc:title
+            ></cc:Agent
+          ></dc:publisher
+        ><dc:title
+          >Biohazard symbol</dc:title
+        ><dc:date
+          >2009-04-01T01:40:47</dc:date
+        ><dc:description
+          >Standard biohazard symbol originally developed by the Dow Chemical company in 1966</dc:description
+        ><dc:source
+          >https://openclipart.org/detail/23551/biohazard-symbol-by-gamefreak7744</dc:source
+        ><dc:creator
+          ><cc:Agent
+            ><dc:title
+              >GameFreak7744</dc:title
+            ></cc:Agent
+          ></dc:creator
+        ><dc:subject
+          ><rdf:Bag
+            ><rdf:li
+              >bacteria</rdf:li
+            ><rdf:li
+              >bacterium</rdf:li
+            ><rdf:li
+              >bin</rdf:li
+            ><rdf:li
+              >bio</rdf:li
+            ><rdf:li
+              >biohazard</rdf:li
+            ><rdf:li
+              >box</rdf:li
+            ><rdf:li
+              >danger</rdf:li
+            ><rdf:li
+              >hazard</rdf:li
+            ><rdf:li
+              >nbc</rdf:li
+            ><rdf:li
+              >sharps</rdf:li
+            ><rdf:li
+              >sign</rdf:li
+            ><rdf:li
+              >symbol</rdf:li
+            ><rdf:li
+              >trefoil</rdf:li
+            ><rdf:li
+              >viral</rdf:li
+            ><rdf:li
+              >virus</rdf:li
+            ><rdf:li
+              >warning</rdf:li
+            ><rdf:li
+              >waste</rdf:li
+            ></rdf:Bag
+          ></dc:subject
+        ></cc:Work
+      ><cc:License
+          rdf:about="http://creativecommons.org/licenses/publicdomain/"
+        ><cc:permits
+            rdf:resource="http://creativecommons.org/ns#Reproduction"
+        /><cc:permits
+            rdf:resource="http://creativecommons.org/ns#Distribution"
+        /><cc:permits
+            rdf:resource="http://creativecommons.org/ns#DerivativeWorks"
+        /></cc:License
+      ></rdf:RDF
+    ></metadata
+  ></svg
+>

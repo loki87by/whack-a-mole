@@ -1,0 +1,219 @@
+:root {
+  --back: yellow;
+}
+body {
+  width: 100vw;
+  background: var(--back);
+}
+.preload {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.preload__text-container {
+  position: relative;
+  width: 80%;
+  height: 45%;
+  margin-top: 5%;
+  overflow: hidden;
+  background-image: url("./assets/Biohazard-symbol.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.preload__text {
+  position: absolute;
+  width: 100%;
+  color: darkmagenta;
+  text-shadow: 2px 2px #fff;
+  font-size: x-large;
+  backdrop-filter: blur(10px) opacity(0.8);
+  transition: bottom 0.5s linear;
+}
+.preload__slider {
+  width: 60%;
+  height: 45%;
+  margin: 2%;
+  overflow: hidden;
+  display: flex;
+}
+.preload__slide {
+  position: relative;
+  min-width: 100%;
+  height: auto;
+  transition: left 2s ease-out;
+}
+.preload__slide-text {
+  margin: 0 auto;
+  font-size: 10vmax;
+  text-align: center;
+  color: red;
+}
+header,
+main,
+footer {
+  width: calc(100% - 20vmin);
+  padding: 0 10vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header {
+  height: 4rem;
+}
+h1 {
+  font-size: 3rem;
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+}
+main {
+  height: calc(100vh - 7rem);
+  flex-direction: column;
+  justify-content: space-between;
+}
+.menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu__item,
+.footer__item {
+  width: max-content;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+button {
+  cursor: pointer;
+  background: var(--back);
+}
+.game {
+  position: relative;
+  width: calc(100% - 10vmin);
+  height: calc(100vh - 10vmin - 10rem);
+  padding: 5vmin;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, calc((100vh - 15vmin - 10rem) / 3 * 2));
+  grid-template-rows: repeat(2, calc((100vh - 15vmin - 10rem) / 2));
+  grid-gap: 5vmin;
+  justify-content: center;
+  overflow: hidden;
+  cursor: crosshair;
+}
+.game__item {
+  position: relative;
+  overflow: hidden;
+}
+.weapon {
+  position: absolute;
+  z-index: 5;
+  transition: transform 0.01s linear;
+}
+.weapon_kicked {
+  transform: rotate3d(1, 1, 2, 30deg);
+}
+.hole {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  bottom: -10%;
+}
+.mole {
+  position: absolute;
+  width: 100%;
+  height: max-content;
+  bottom: -100%;
+  background-image: url("./assets/mole.png");
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  transition: bottom 0.1s linear;
+}
+.mole_up {
+  bottom: 0;
+}
+footer {
+  height: 3rem;
+  justify-content: space-between;
+}
+.footer__item {
+  margin: 1rem 0;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s, visibility 0s linear 0.3s;
+  -o-transition: opacity 0.5s, visibility 0s linear 0.3s;
+  transition: opacity 0.5s, visibility 0s linear 0.3s;
+  overflow: scroll;
+}
+
+.popup_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup__container {
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+  z-index: 4;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.popup__title {
+  width: max-content;
+  margin: 20vh auto;
+  font-size: 5rem;
+  color: red;
+}
+
+.popup__button {
+  height: 5vmin;
+  margin: 3vmin;
+  background: var(--back);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
