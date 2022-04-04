@@ -80,9 +80,9 @@ function setDrubbing(arg) {
       if (index !== 0) {
         drubbingString += ` `;
       }
-      drubbingString += ` url('${window.location.origin}/assets/${i}.png'),`;
+      drubbingString += ` url('${window.location.href}/assets/${i}.png'),`;
     });
-    drubbingString += ` url('${window.location.origin}/assets/mole.png')`;
+    drubbingString += ` url('${window.location.href}/assets/mole.png')`;
     const moles = document.querySelectorAll(".mole");
     moles.forEach((i) => {
       i.style = `background-image: ${drubbingString};height: ${holeContainerHeight}px;`;
@@ -247,7 +247,7 @@ function peep() {
     e.stopImmediatePropagation();
     kicks -= 1;
     if (kicks < 1) {
-      kicks = 0
+      kicks = 0;
     }
     KICKS.textContent = `Kicks: ${kicks}`;
     WEAPON.classList.remove("weapon_kicked");
@@ -286,9 +286,9 @@ function copySelector(element, parent) {
 }
 
 function setLevelData() {
-  let firstColor = 'f'
-  let secondColor = 'f'
-  let thirdColor = level
+  let firstColor = "f";
+  let secondColor = "f";
+  let thirdColor = level;
   drubbing = [];
   timeUp = false;
   damage = 0;
@@ -311,34 +311,37 @@ function setLevelData() {
   DAMAGE.textContent = `Damage: ${damage}`;
   KICKS.textContent = `Kicks: ${kicks}`;
   minTime = 1000 - level * 75;
-  maxTime = 3000 - level * 100;
+  maxTime = 2000 - level * 50;
   if (level < 3) {
-    WEAPON.src="./assets/rolling-pin.png"
-    const HOLES = document.querySelectorAll(".game__item")
+    WEAPON.src = `${window.location.href}/assets/rolling-pin.png`;
+    const HOLES = document.querySelectorAll(".game__item");
     if (HOLES.length > 6) {
-      for(let i = 6; i < HOLES.length; i++) {
-        GAME.removeChild(HOLES[i])
+      for (let i = 6; i < HOLES.length; i++) {
+        GAME.removeChild(HOLES[i]);
       }
-      GAME.style = ''
+      GAME.style = "";
     }
-    firstColor = 'f'
-  secondColor = 'f'
-  thirdColor = level
+    firstColor = "f";
+    secondColor = "f";
+    thirdColor = level;
   }
   if (level >= 3) {
     copySelector(HOLE_CONTAINER, GAME);
     copySelector(HOLE_CONTAINER, GAME);
     GAME.style =
       "grid-template-columns: repeat(4, 1fr);grid-template-rows: repeat(2, calc((100vh - 15vmin) / 3.2))";
-    WEAPON.src = "./assets/pan.png";
-    firstColor = level
+    WEAPON.src = `${window.location.href}/assets/pan.png`;
+    firstColor = level;
   }
   if (level >= 5) {
-    WEAPON.src = "./assets/hammer.png";
-    secondColor = level
-    thirdColor = 'f'
+    WEAPON.src = `${window.location.href}/assets/hammer.png`;
+    secondColor = level;
+    thirdColor = "f";
   }
-  HTML.style.setProperty("--back", `#${firstColor}${firstColor}${secondColor}${secondColor}${thirdColor}${thirdColor}`);
+  HTML.style.setProperty(
+    "--back",
+    `#${firstColor}${firstColor}${secondColor}${secondColor}${thirdColor}${thirdColor}`
+  );
 }
 
 function start() {
@@ -371,17 +374,15 @@ checkHiscore();
 setMolesHeight();
 
 function weapon(e) {
-  if (WEAPON.src === `${window.location.origin}/assets/hammer.png`) {
+  if (WEAPON.src === `${window.location.href}/assets/hammer.png`) {
     WEAPON.style.left = `${Math.floor(e.pageX - WEAPON.width * 0.55)}px`;
     WEAPON.style.top = `${Math.floor(e.pageY - WEAPON.height * 0.9)}px`;
-  } else if (WEAPON.src === `${window.location.origin}/assets/pan.png`) {
+  } else if (WEAPON.src === `${window.location.href}/assets/pan.png`) {
     WEAPON.style.left = `${Math.floor(e.pageX - WEAPON.width * 1.1)}px`;
     WEAPON.style.top = `${Math.floor(e.pageY - WEAPON.height / 1.2)}px`;
   } else {
     WEAPON.style.left = `${Math.floor(e.pageX - WEAPON.width * 2.4)}px`;
-    WEAPON.style.top = `${
-      Math.floor(e.pageY - WEAPON.height * 0.83)
-    }px`;
+    WEAPON.style.top = `${Math.floor(e.pageY - WEAPON.height * 0.83)}px`;
   }
 }
 
