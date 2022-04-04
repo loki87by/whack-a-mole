@@ -1,4 +1,5 @@
 const PRELOAD = document.querySelector(".preload");
+const HTML = document.querySelector("html");
 const preloadText = document.querySelector(".preload__text");
 const HEADER = document.querySelector("header");
 const MAIN = document.querySelector("main");
@@ -285,6 +286,9 @@ function copySelector(element, parent) {
 }
 
 function setLevelData() {
+  let firstColor = 'f'
+  let secondColor = 'f'
+  let thirdColor = level
   drubbing = [];
   timeUp = false;
   damage = 0;
@@ -308,16 +312,33 @@ function setLevelData() {
   KICKS.textContent = `Kicks: ${kicks}`;
   minTime = 1000 - level * 75;
   maxTime = 3000 - level * 100;
+  if (level < 3) {
+    WEAPON.src="./assets/rolling-pin.png"
+    const HOLES = document.querySelectorAll(".game__item")
+    if (HOLES.length > 6) {
+      for(let i = 6; i < HOLES.length; i++) {
+        GAME.removeChild(HOLES[i])
+      }
+      GAME.style = ''
+    }
+    firstColor = 'f'
+  secondColor = 'f'
+  thirdColor = level
+  }
   if (level >= 3) {
     copySelector(HOLE_CONTAINER, GAME);
     copySelector(HOLE_CONTAINER, GAME);
     GAME.style =
       "grid-template-columns: repeat(4, 1fr);grid-template-rows: repeat(2, calc((100vh - 15vmin) / 3.2))";
     WEAPON.src = "./assets/pan.png";
+    firstColor = level
   }
   if (level >= 5) {
     WEAPON.src = "./assets/hammer.png";
+    secondColor = level
+    thirdColor = 'f'
   }
+  HTML.style.setProperty("--back", `#${firstColor}${firstColor}${secondColor}${secondColor}${thirdColor}${thirdColor}`);
 }
 
 function start() {
@@ -359,14 +380,14 @@ function weapon(e) {
   } else {
     WEAPON.style.left = `${Math.floor(e.pageX - WEAPON.width * 2.4)}px`;
     WEAPON.style.top = `${
-      Math.floor(e.pageY - WEAPON.height * 0.83) /* WEAPON.height * 0.25) */
+      Math.floor(e.pageY - WEAPON.height * 0.83)
     }px`;
   }
 }
 
 function preloadTextShift() {
   let bottom = +preloadText.style.bottom.replace("%", "");
-  if (bottom < 100) {
+  if (bottom < 125) {
     setTimeout(() => {
       bottom += 1;
       preloadText.style.bottom = `${bottom}%`;
@@ -379,7 +400,7 @@ function preloadTextShift() {
     FOOTER.classList.remove("hidden");
     start();
   }
-  if (bottom % 25 === 0) {
+  if ((bottom % 150 !== 0 && bottom % 25 === 0) || bottom === 0) {
     slidePosition++;
     const slides = document.querySelectorAll(".preload__slide");
     slides.forEach((slide) => {
