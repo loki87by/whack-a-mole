@@ -311,7 +311,7 @@ function setLevelData() {
   DAMAGE.textContent = `Damage: ${damage}`;
   KICKS.textContent = `Kicks: ${kicks}`;
   minTime = 1000 - level * 75;
-  maxTime = 3000 - level * 200;
+  maxTime = 2000 - level * 50;
   if (level < 3) {
     WEAPON.src=`${window.location.href}/assets/rolling-pin.png`
     const HOLES = document.querySelectorAll(".game__item")
