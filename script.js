@@ -313,7 +313,7 @@ function setLevelData() {
   minTime = 1000 - level * 75;
   maxTime = 3000 - level * 100;
   if (level < 3) {
-    WEAPON.src="./assets/rolling-pin.png"
+    WEAPON.src=`${window.location.href}/assets/rolling-pin.png`
     const HOLES = document.querySelectorAll(".game__item")
     if (HOLES.length > 6) {
       for(let i = 6; i < HOLES.length; i++) {
@@ -330,11 +330,11 @@ function setLevelData() {
     copySelector(HOLE_CONTAINER, GAME);
     GAME.style =
       "grid-template-columns: repeat(4, 1fr);grid-template-rows: repeat(2, calc((100vh - 15vmin) / 3.2))";
-    WEAPON.src = "./assets/pan.png";
+    WEAPON.src = `${window.location.href}/assets/pan.png`;
     firstColor = level
   }
   if (level >= 5) {
-    WEAPON.src = "./assets/hammer.png";
+    WEAPON.src = `${window.location.href}/assets/hammer.png`;
     secondColor = level
     thirdColor = 'f'
   }
