@@ -170,43 +170,31 @@ button {
 .game > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-row: 1;
-  grid-column: 1;
 }
 
 .game > *:nth-child(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
-  grid-row: 1;
-  grid-column: 3;
 }
 
 .game > *:nth-child(3) {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
-  grid-row: 1;
-  grid-column: 5;
 }
 
 .game > *:nth-child(4) {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-row: 3;
-  grid-column: 1;
 }
 
 .game > *:nth-child(5) {
   -ms-grid-row: 3;
   -ms-grid-column: 3;
-  grid-row: 3;
-  grid-column: 3;
 }
 
 .game > *:nth-child(6) {
   -ms-grid-row: 3;
   -ms-grid-column: 5;
-  grid-row: 3;
-  grid-column: 5;
 }
 
 .game__item {
